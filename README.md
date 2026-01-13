@@ -23,17 +23,18 @@ with Nginx acting as a gateway and static UI server.
 
 ```mermaid
 flowchart LR
-  U[User Browser] -->|HTTP :8080| N[Nginx (web)]
-  N -->|serves static UI| UI[HTML + JS]
+  U[User Browser] --> N[Nginx (web)]
+  N --> UI[Static UI<br/>(HTML + JS)]
 
-  N -->|/authapi| A[auth-service]
-  N -->|/api| E[events-service]
-  N -->|/insightsapi| I[insights-service]
+  N --> A[auth-service]
+  N --> E[events-service]
+  N --> I[insights-service]
 
-  A --> P[(Postgres)]
-  E --> P
+  A --> DB[(PostgreSQL)]
+  E --> DB
 
   I --> E
+
 ```
 ---
 
