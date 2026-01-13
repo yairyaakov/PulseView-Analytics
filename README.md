@@ -81,7 +81,7 @@ docker compose up --build
 
 ---
 
-```md
+
 ## How to demo the system
 
 1. Open the funnel dashboard in the browser  
