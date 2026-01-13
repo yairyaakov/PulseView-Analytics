@@ -78,17 +78,34 @@ JWT_EXPIRES_IN=1h
 ## Start the system
 docker compose up --build
 
+## The demo uses two browser pages:
+
+1. **Demo Site (event generator)**  
+   http://localhost:8080/index.html  
+   Used to generate real user events (page views, clicks, signup completion).
+
+2. **Analytics Dashboard**  
+   http://localhost:8080/funnels.html  
+   Used to visualize funnels, conversion rates, and insights.
+
 ## How to demo the system
 
-1. Open the funnel dashboard in the browser  
-   http://localhost:8080/funnels.html
-2. Login using the auth form
-3. Select a site and time range
-4. Send events (page_view, click, signup_completed)
+1. Open the demo site  
+   http://localhost:8080/index.html  
+   Interact with the page (click buttons, complete signup).
+
+2. Open the analytics dashboard  
+   http://localhost:8080/funnels.html  
+
+3. Login using the auth form
+
+4. Select a site and time range
+
 5. Refresh the dashboard to see:
-   - Funnel steps
+   - Funnel steps updating in real time
    - Conversion rates
-   - Insights and recommendations
+   - Automatically generated insights and recommendations
+
 
 
 ## Engineering highlights
