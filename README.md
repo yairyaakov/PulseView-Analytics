@@ -34,7 +34,7 @@ flowchart LR
   E --> P
 
   I --> E
-```mermaid
+```
 ---
 
 ## Services overview
