@@ -55,32 +55,28 @@ including severity, summary and recommendations.
 Serves the frontend dashboard and proxies API requests  
 to internal services.
 
+---
+## How to run locally
 
-## Services overview
+### Prerequisites
 
-### auth-service
-Handles user registration and login.  
-Issues JWT tokens used to authenticate API requests.
+- Docker
+- Docker Compose
 
-### events-service
-Receives tracking events and stores them in PostgreSQL.  
-Calculates funnel statistics per site and time range.
+### Environment variables
 
-### insights-service
-Consumes funnel data and generates human-readable insights,  
-including severity, summary and recommendations.
+Create a `.env` file in the project root:
 
-### web (nginx)
-Serves the frontend dashboard and proxies API requests  
-to internal services.
+```env
+POSTGRES_USER=pv
+POSTGRES_PASSWORD=pvpass
+POSTGRES_DB=pvdb
+JWT_SECRET=change-me
+JWT_EXPIRES_IN=1h
+```
 
 ## Start the system
 docker compose up --build
-
-
-
----
-
 
 ## How to demo the system
 
